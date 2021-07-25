@@ -11,14 +11,16 @@ The toehold switch sequences described in this work are of three types:
 2. Forward engineered switches - Switches numbered from 169 - 181 (inclusive) are forward engineered switches, with significantly higher dynamic range (high ON/OFF) ratios, also obtained from Green et al. (2014)[^1].
 3. Toehold switches engineered for detecting Zika virus - Switches numbered from 182 - 228 (inclusive) are obtained from Pardee et al. (2016) [^2].  These switches have been used in the context of Zika virus detection.
 
-[^1]: Green AA, Silver PA, Collins JJ, Yin P. Toehold switches: De-novo-designed regulators of gene expression. Cell 2014. https://doi.org/10.1016/j.cell.2014.10.002.
-[^2]: Pardee K, Green AA, Takahashi MK, Braff D, Lambert G, Lee JW, et al. Rapid, LowCost Detection of Zika Virus Using Programmable Biomolecular Components. Cell
-2016;165:1255–66. https://doi.org/10.1016/j.cell.2016.04.059.
-
 The goal of this work is to design *second generation toehold switches*, those that would bind to a trigger complex between an miRNA and and anti-miR sequence instead of just a single molecular species.  The design of the second generation toehold switch is described in Green et al. (2017). [^3]
 
+
+[^1]: Green AA, Silver PA, Collins JJ, Yin P. Toehold switches: De-novo-designed regulators of gene expression. Cell 2014. https://doi.org/10.1016/j.cell.2014.10.002. 
+[^2]: Pardee K, Green AA, Takahashi MK, Braff D, Lambert G, Lee JW, et al. Rapid, LowCost Detection of Zika Virus Using Programmable Biomolecular Components. Cell
+2016;165:1255–66. https://doi.org/10.1016/j.cell.2016.04.059.
 [^3]: Green AA, Kim J, Ma D, Silver PA, Collins JJ, Yin P. Complex cellular logic computation using ribocomputing devices. Nature 2017. https://doi.org/10.1038/nature23271.
 
+## Code
+---
 
 ## Citation 
 ---
