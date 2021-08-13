@@ -8,4 +8,5 @@ for i in range(0,6):
 	effic+=coeff[i]*float(sys.argv[i+1])
 
 effic+=intercept
-print effic
+
+print(effic)

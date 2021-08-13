@@ -19,9 +19,9 @@ for i in range(5,10):
 
 bottom_reg=toehold_domain_seq+stemb_asc_seq+'&'+stemb_desc_seq+horizontal_linker_domain_seq
 if (sys.argv[3]=='1'):
-	print rbs_linker
+	print(rbs_linker)
 elif (sys.argv[3]=='2'):
-	print bottom_reg
+	print(bottom_reg)
 else:
-	print bs_seq+'&'+sys.argv[3]
+	print(bs_seq+'&'+sys.argv[3])
 

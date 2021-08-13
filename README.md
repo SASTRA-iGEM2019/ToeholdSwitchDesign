@@ -19,8 +19,6 @@ The goal of this work is to design *second generation toehold switches*, those t
 2016;165:1255–66. https://doi.org/10.1016/j.cell.2016.04.059.
 [^3]: Green AA, Kim J, Ma D, Silver PA, Collins JJ, Yin P. Complex cellular logic computation using ribocomputing devices. Nature 2017. https://doi.org/10.1038/nature23271.
 
-## Code
----
 
 ## Citation 
 ---
