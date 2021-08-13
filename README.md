@@ -13,11 +13,12 @@ The toehold switch sequences described in this work are of three types:
 
 The goal of this work is to design *second generation toehold switches*, those that would bind to a trigger complex between an miRNA and and anti-miR sequence instead of just a single molecular species.  The design of the second generation toehold switch is described in Green et al. (2017). [^3]
 
-
-[^1]: Green AA, Silver PA, Collins JJ, Yin P. Toehold switches: De-novo-designed regulators of gene expression. Cell 2014. https://doi.org/10.1016/j.cell.2014.10.002. 
-[^2]: Pardee K, Green AA, Takahashi MK, Braff D, Lambert G, Lee JW, et al. Rapid, LowCost Detection of Zika Virus Using Programmable Biomolecular Components. Cell
+### References
+---
+1. Green AA, Silver PA, Collins JJ, Yin P. Toehold switches: De-novo-designed regulators of gene expression. Cell 2014. https://doi.org/10.1016/j.cell.2014.10.002. 
+2.  Pardee K, Green AA, Takahashi MK, Braff D, Lambert G, Lee JW, et al. Rapid, LowCost Detection of Zika Virus Using Programmable Biomolecular Components. Cell
 2016;165:1255–66. https://doi.org/10.1016/j.cell.2016.04.059.
-[^3]: Green AA, Kim J, Ma D, Silver PA, Collins JJ, Yin P. Complex cellular logic computation using ribocomputing devices. Nature 2017. https://doi.org/10.1038/nature23271.
+3. Green AA, Kim J, Ma D, Silver PA, Collins JJ, Yin P. Complex cellular logic computation using ribocomputing devices. Nature 2017. https://doi.org/10.1038/nature23271.
 
 
 ## Citation 
