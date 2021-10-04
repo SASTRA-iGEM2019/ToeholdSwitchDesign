@@ -3,13 +3,19 @@
 This repository provides insight into [iGEM SASTRA 2019](https://2019.igem.org/Team:SASTRA_Thanjavur)'s software effort to predict the ON/OFF ratio of toehold switches. The ON/OFF ratio represents the dynamic range of the toehold switch, an important *in vitro* metric to determine the efficacy and performance of a toehold switch.
 
 The repository is organized in the following structure:
+
 (1) data folder: contains the 228 toehold instances collected from the literature [1,2,3] and used in our study (please see citation). 
+
 (2) GrammarParser.py: A tool for , described below
+
 (3) predict.py: A tool for 
+
 (4) toehold_efficacy_predict.sh: A wrapper for , described below.
 
 We provide two tools to work with the design of toehold switches:
+
 (1) GrammarParser.py:
+
 Used to return the domain structure of a toehold switch sequence, i.e, parsing the sequence into its parts. Please see our manuscript (Baabu et al., 2021) for more details. 
 Output:
 
