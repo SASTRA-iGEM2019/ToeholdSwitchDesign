@@ -1,17 +1,42 @@
-# Prediction of the ON/OFF ratio of toehold switches and subsequent domain-wise design.
+# Toehold switch modelling
 ---
 This repository provides insight into [iGEM SASTRA 2019](https://2019.igem.org/Team:SASTRA_Thanjavur)'s software effort to predict the ON/OFF ratio of toehold switches. The ON/OFF ratio represents the dynamic range of the toehold switch, an important *in vitro* metric to determine the efficacy and performance of a toehold switch.
+
+The repository is organized in the following structure:
+(1) data folder: contains the 228 toehold instances collected from the literature [1,2,3] and used in our study (please see citation). 
+(2) GrammarParser.py: A tool for , described below
+(3) predict.py: A tool for 
+(4) toehold_efficacy_predict.sh: A wrapper for , described below.
+
+We provide two tools to work with the design of toehold switches:
+(1) GrammarParser.py:
+Used to return the domain structure of a toehold switch sequence, i.e, parsing the sequence into its parts. Please see our manuscript (Baabu et al., 2021) for more details. 
+Output:
+
+Usage: 
+python GrammarParser toehold_seq dot-bracket_rep
+
+(2) predict.py:
+Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes the following feature values in order as arguments:
+(1) 
+
+Usage:
+ python predict.py arg1 arg2 arg3 ...
+
+Output: 
+
+toehold_efficacy_predict.sh
+We also provide a wrapper to automate the prediction of toehold efficacy given toehold sequence(s).
+
 
 ## Data
 ---
 The **/data** folder consists of two *.csv* files: *all_features.csv* and *selected_features.csv*.  The former consists of all the engineered sequence and structural features and the latter consists of features with the best predictive capabilities.
 
-The toehold switch sequences described in this work are of three types:
-1. First generation switches - Switches numbered from 1 - 168 (inclusive) are first generation toehold switches with lesser dynamic range.  These were obtained from Green et al. (2014) [^1].
-2. Forward engineered switches - Switches numbered from 169 - 181 (inclusive) are forward engineered switches, with significantly higher dynamic range (high ON/OFF) ratios, also obtained from Green et al. (2014)[^1].
-3. Toehold switches engineered for detecting Zika virus - Switches numbered from 182 - 228 (inclusive) are obtained from Pardee et al. (2016) [^2].  These switches have been used in the context of Zika virus detection.
-
-The goal of this work is to design *second generation toehold switches*, those that would bind to a trigger complex between an miRNA and and anti-miR sequence instead of just a single molecular species.  The design of the second generation toehold switch is described in Green et al. (2017). [^3]
+## Citation 
+---
+Our software is made freely available for the scientific community under GNU GPL v3. Please cite us:
+Baabu et al [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). (2021) 
 
 ### References
 ---
@@ -19,8 +44,3 @@ The goal of this work is to design *second generation toehold switches*, those t
 2.  Pardee K, Green AA, Takahashi MK, Braff D, Lambert G, Lee JW, et al. Rapid, LowCost Detection of Zika Virus Using Programmable Biomolecular Components. Cell
 2016;165:1255–66. https://doi.org/10.1016/j.cell.2016.04.059.
 3. Green AA, Kim J, Ma D, Silver PA, Collins JJ, Yin P. Complex cellular logic computation using ribocomputing devices. Nature 2017. https://doi.org/10.1038/nature23271.
-
-
-## Citation 
----
-More information about the toehold switch prediction software can be found in the preprint titled: [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). [Manuscript submitted]
