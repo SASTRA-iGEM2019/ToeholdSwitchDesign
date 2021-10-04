@@ -37,7 +37,11 @@ We also provide a wrapper to automate the prediction of toehold efficacy given t
 
 ## Data
 ---
-The **/data** folder consists of two *.csv* files: *all_features.csv* and *selected_features.csv*.  The former consists of all the engineered sequence and structural features and the latter consists of features with the best predictive capabilities.
+The **/data** folder consists of two *.csv* files: 
+
+(1) *all_features.csv* : consisting of all the engineered sequence and structural features
+
+(2) *selected_features.csv* : consisting features with the best predictive capabilities, post feature-selection (see our manuscript for details).
 
 ## Citation 
 ---
