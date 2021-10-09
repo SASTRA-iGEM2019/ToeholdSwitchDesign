@@ -1,5 +1,5 @@
 # Toehold switch modelling
----
+
 This repository provides insight into [iGEM SASTRA 2019](https://2019.igem.org/Team:SASTRA_Thanjavur)'s software effort to predict the ON/OFF ratio of toehold switches. The ON/OFF ratio represents the dynamic range of the toehold switch, an important *in vitro* metric to determine the efficacy and performance of a toehold switch.
 
 We provide two tools to work with the design of toehold switches:
@@ -26,7 +26,7 @@ We also provide a wrapper to automate the prediction of toehold efficacy given t
 
 
 ## Data
----
+
 The **data** folder consists of the engineered features for the 228 toehold instances from the literature [1,2,3]: 
 
 (1) *all_features.csv* : consisting of all the engineered sequence and structural features
@@ -34,7 +34,7 @@ The **data** folder consists of the engineered features for the 228 toehold inst
 (2) *selected_features.csv* : consisting features with the best predictive capabilities, post feature-selection (see our manuscript for details).
 
 ## Citation 
----
+
 Our software is made freely available for the scientific community under GNU GPL v3. To cite:
 Baabu et al [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). (2021) 
 
