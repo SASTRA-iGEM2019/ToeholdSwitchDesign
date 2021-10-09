@@ -35,7 +35,7 @@ The **data** folder consists of the engineered features for the 228 toehold inst
 
 ## Citation 
 ---
-Our software is made freely available for the scientific community under GNU GPL v3. Please cite us:
+Our software is made freely available for the scientific community under GNU GPL v3. To cite:
 Baabu et al [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). (2021) 
 
 ### References
