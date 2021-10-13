@@ -23,13 +23,13 @@ Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes
 
     The script does the following:
  
-    > (i) calls ViennaRNA RNAfold to parse the input sequence into its dot-bracket representation
+    (i) calls ViennaRNA RNAfold to parse the input sequence into its dot-bracket representation
  
-    > (ii) calls GrammarParser to then extract the segments of the toehold switch based on this dot-bracket representation
+    (ii) calls GrammarParser to then extract the segments of the toehold switch based on this dot-bracket representation
  
-    > (iii) calls more ViennaRNA RNAfold utilities to obtain engineered feature values for the given toehold switch sequence
+    (iii) calls more ViennaRNA RNAfold utilities to obtain engineered feature values for the given toehold switch sequence
  
-    > (iv) passes these feature values as input to 'predict.py` and returns the dynamic range of the toehold switch sequence. 
+    (iv) passes these feature values as input to 'predict.py` and returns the dynamic range of the toehold switch sequence. 
  
  - `Input`: Toehold switch sequence(s) in FASTA format.
  - `Output`: Predicted dynamic range(s) of given toehold switch sequence(s)
