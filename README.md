@@ -1,4 +1,4 @@
-# Second-generation toehold switch design
+# Modelling the dynamic range of second-generation toehold switches
 
 Three open-source tools were developed for machine-learning based design of RNA devices, namely toehold switches. They have been developed for second-generation toehold switch designs, but could be adapted for first-generation toehold switches. 
 
@@ -12,7 +12,7 @@ Used to return the domain structure of a toehold switch, i.e, parsing the sequen
 (2) predict.py:
 
 Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes the non-redundant engineered feature values in order as arguments, and returns the dynamic range of the construct: 
- - `Input` (six features in order): OverallMFE Frequency NetMFE BotRegMFE RBS-linkerMFE SpHeat
+ - `Input` (six `Features` in order): OverallMFE Frequency NetMFE BotRegMFE RBS-linkerMFE SpHeat
  - `Usage`: python predict.py `InputFeatures`
  - `Output`: Dynamic range of the given toehold switch construct
 
@@ -34,7 +34,8 @@ Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes
  - `Input`: Toehold switch sequence(s) in FASTA format.
  - `Output`: Predicted dynamic range(s) of given toehold switch sequence(s)
  - `Usage`: sh ./toehold_efficacy_predict.sh Input_Seq_File
-The Input_Seq_File can contain multiple 
+
+    The script can be operated in *`batch` mode* by providing an `Input_Seq_File` with multiple toehold switch sequences. The dynamic ranges of all the toeholds are then predicted. 
  
 ### Requirements:
  
