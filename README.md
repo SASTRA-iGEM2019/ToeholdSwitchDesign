@@ -41,7 +41,7 @@ Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes
  
 (1) [`ViennaRNA`](https://www.tbi.univie.ac.at/RNA/) must be installed and available in the path. 
  
-(2) Python 
+(2) Python 3.0 or above
  
 (3) bash shell
  
