@@ -33,7 +33,7 @@ An integrated script written in bash that provides an end-to-end pipeline for th
  - `Usage`: sh ./toehold_efficacy_predict.sh Input_Seq_File
 The Input_Seq_File can contain multiple 
  
-Requirements:
+###Requirements:
  
 (1) `ViennaRNA` must be installed and available in the path. 
  
