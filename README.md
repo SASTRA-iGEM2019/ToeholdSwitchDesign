@@ -12,8 +12,8 @@ Used to return the domain structure of a toehold switch, i.e, parsing the sequen
 (2) predict.py:
 
 Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes the non-redundant engineered feature values in order as arguments, and returns the dynamic range of the construct: 
- - `Input` (features in order): OverallMFE Frequency NetMFE BotRegMFE RBS-linkerMFE SpHeat
- - `Usage`: python predict.py <InputFeatures>
+ - `Input` (six features in order): OverallMFE Frequency NetMFE BotRegMFE RBS-linkerMFE SpHeat
+ - `Usage`: python predict.py `InputFeatures`
  - `Output`: Dynamic range of the given toehold switch construct
 
   
@@ -59,7 +59,7 @@ Our software is made freely available for the scientific community under GNU GPL
  
 Baabu et al [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). (2021) 
 
-### Raw data for feature engineering:
+### Primary sources for building our dataset:
 1. Green AA, Silver PA, Collins JJ, Yin P. Toehold switches: De-novo-designed regulators of gene expression. Cell 2014. https://doi.org/10.1016/j.cell.2014.10.002. 
 2.  Pardee K, Green AA, Takahashi MK, Braff D, Lambert G, Lee JW, et al. Rapid, LowCost Detection of Zika Virus Using Programmable Biomolecular Components. Cell
 2016;165:1255–66. https://doi.org/10.1016/j.cell.2016.04.059.
