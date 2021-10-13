@@ -1,6 +1,6 @@
-# Toehold switch modelling
+# Second-generation toehold switch design
 
-Three open-source tools developed for machine-learning based design of RNA devices, namely toehold switches. 
+Three open-source tools were developed for machine-learning based design of RNA devices, namely toehold switches. They have been developed for second-generation toehold switch designs, but could be adapted for first-generation toehold switches. 
 
 (1) GrammarParser.py:
 
