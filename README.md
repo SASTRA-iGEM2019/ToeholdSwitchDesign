@@ -24,9 +24,9 @@ An integrated script written in bash that provides an end-to-end pipeline for th
  
   > (ii) calls GrammarParser to then extract the segments of the toehold switch based on this dot-bracket representation
  
-  > (iii) calls more ViennaRNA RNAfold utilities to obtain all the feature values for the given toehold switch sequence
+  > (iii) calls more ViennaRNA RNAfold utilities to obtain engineered feature values for the given toehold switch sequence
  
-  > (iv) passes these feature values as the input to 'predict.py` and returns the dynamic range of the toehold switch sequence. 
+  > (iv) passes these feature values as input to 'predict.py` and returns the dynamic range of the toehold switch sequence. 
  
  - `Input`: Toehold switch sequence(s) in FASTA format.
  - `Output`: Predicted dynamic range(s) of given toehold switch sequence(s)
@@ -35,7 +35,7 @@ The Input_Seq_File can contain multiple
  
 ### Requirements:
  
-(1) `ViennaRNA` must be installed and available in the path. 
+(1) [`ViennaRNA`](https://www.tbi.univie.ac.at/RNA/) must be installed and available in the path. 
  
 (2) Python 
  
@@ -52,9 +52,8 @@ The **data** folder consists of the engineered features for the 228 toehold inst
 
 ## Citation 
 
-Our software is made freely available for the scientific community under GNU GPL v3. 
-
-To cite:
+Our software is made freely available for the scientific community under GNU GPL v3. To cite:
+ 
 Baabu et al [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). (2021) 
 
 ### Raw data for feature engineering:
