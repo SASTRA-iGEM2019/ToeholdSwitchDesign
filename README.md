@@ -35,7 +35,7 @@ Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes
  - `Output`: Predicted dynamic range(s) of given toehold switch sequence(s)
  - `Usage`: sh ./toehold_efficacy_predict.sh Input_Seq_File
 
-    The script can be operated in *`batch` mode* by providing an `Input_Seq_File` with multiple toehold switch sequences. The dynamic ranges of all the toeholds are then predicted. 
+    The script can be operated in **`batch` mode** by providing an `Input_Seq_File` with multiple toehold switch sequences. The dynamic ranges of all the toeholds are then predicted. 
  
 ### Requirements:
  
