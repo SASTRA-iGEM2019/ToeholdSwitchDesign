@@ -19,7 +19,9 @@ Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes
  
 (3) toehold_efficacy_predict.sh:
  
-   An integrated script written in bash that provides an end-to-end pipeline for the prediction of toehold efficacy for second-generation toehold switches.  The script does the following:
+    An integrated script written in bash that provides an end-to-end pipeline for the prediction of toehold efficacy for second-generation toehold switches.  
+
+    The script does the following:
  
     > (i) calls ViennaRNA RNAfold to parse the input sequence into its dot-bracket representation
  
