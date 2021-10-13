@@ -13,15 +13,27 @@ Used to return the domain structure of a toehold switch, i.e, parsing the sequen
 
 (2) predict.py:
 Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes the non-redundant engineered feature values in order as arguments, and returns the dynamic range of the construct: 
- - `Input`: python predict.py OverallMFE Frequency NetMFE BotRegMFE RBS-linkerMFE SpHeat
+ - `Usage`: python predict.py <InputFeatures>
+ - `Input Features` (in order): OverallMFE Frequency NetMFE BotRegMFE RBS-linkerMFE SpHeat
  - `Output`: 
-
+Please refer the manuscript for more details on the input features.
 (3) toehold_efficacy_predict.sh
-An integrated script written in bash that provides an end-to-end pipeline for the prediction of toehold efficacy for second-generation toehold switches.  The script calls GrammarParser to parse the input and then calls predict to estimate the switch efficacy.
+An integrated script written in bash that provides an end-to-end pipeline for the prediction of toehold efficacy for second-generation toehold switches.  The script does the following:
+(i) calls ViennaRNA RNAfold to parse the input sequence into its dot-bracket representation
+ (ii) calls GrammarParser to then extract the segments of the toehold switch based on this dot-bracket representation
+ (iii) calls more ViennaRNA RNAfold utilities to obtain all the feature values for the given toehold switch sequence
+ (iv) passes these feature values as the input to 'predict.py` and returns the dynamic range of the toehold switch sequence. 
+ 
  - `Input`: Toehold switch sequence(s) in FASTA format.
  - `Output`: Predicted dynamic range(s) of given toehold switch sequence(s)
  - `Usage`: sh ./toehold_efficacy_predict.sh Input_Seq_File
-
+The Input_Seq_File can contain multiple 
+ 
+Requirements:
+(1) `ViennaRNA` must be installed and available in the path. 
+(2) Python 
+(3) bash shell
+ 
 
 ## Data
 
@@ -34,6 +46,7 @@ The **data** folder consists of the engineered features for the 228 toehold inst
 ## Citation 
 
 Our software is made freely available for the scientific community under GNU GPL v3. 
+
 To cite:
 Baabu et al [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). (2021) 
 
