@@ -1,9 +1,6 @@
 # Toehold switch modelling
 
-Three open-source tools developed for machine-learning based design of RNA devices specifically toehold switches. 
-This repository provides insight into [iGEM SASTRA 2019](https://2019.igem.org/Team:SASTRA_Thanjavur)'s software effort to predict the ON/OFF ratio of toehold switches. The ON/OFF ratio represents the dynamic range of the toehold switch, an important *in vitro* metric to determine the efficacy and performance of a toehold switch.
-
-We provide two tools to work with the design of toehold switches:
+Three open-source tools developed for machine-learning based design of RNA devices, namely toehold switches. 
 
 (1) GrammarParser.py:
 
@@ -21,13 +18,13 @@ Please refer the manuscript for more details on the input features.
 (3) toehold_efficacy_predict.sh
 An integrated script written in bash that provides an end-to-end pipeline for the prediction of toehold efficacy for second-generation toehold switches.  The script does the following:
  
-(i) calls ViennaRNA RNAfold to parse the input sequence into its dot-bracket representation
+ - (i) calls ViennaRNA RNAfold to parse the input sequence into its dot-bracket representation
  
- (ii) calls GrammarParser to then extract the segments of the toehold switch based on this dot-bracket representation
+ - (ii) calls GrammarParser to then extract the segments of the toehold switch based on this dot-bracket representation
  
- (iii) calls more ViennaRNA RNAfold utilities to obtain all the feature values for the given toehold switch sequence
+ - (iii) calls more ViennaRNA RNAfold utilities to obtain all the feature values for the given toehold switch sequence
  
- (iv) passes these feature values as the input to 'predict.py` and returns the dynamic range of the toehold switch sequence. 
+ - (iv) passes these feature values as the input to 'predict.py` and returns the dynamic range of the toehold switch sequence. 
  
  - `Input`: Toehold switch sequence(s) in FASTA format.
  - `Output`: Predicted dynamic range(s) of given toehold switch sequence(s)
