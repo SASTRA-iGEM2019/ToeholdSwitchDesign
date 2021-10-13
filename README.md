@@ -14,7 +14,8 @@ Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes
  - `Usage`: python predict.py <InputFeatures>
  - `Input Features` (in order): OverallMFE Frequency NetMFE BotRegMFE RBS-linkerMFE SpHeat
  - `Output`: 
-Please refer the manuscript for more details on the input features.
+
+ Please refer the manuscript for more details on the input features.
  
 (3) toehold_efficacy_predict.sh:
  
