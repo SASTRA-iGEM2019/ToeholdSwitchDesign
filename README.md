@@ -17,11 +17,16 @@ Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes
  - `Input Features` (in order): OverallMFE Frequency NetMFE BotRegMFE RBS-linkerMFE SpHeat
  - `Output`: 
 Please refer the manuscript for more details on the input features.
+ 
 (3) toehold_efficacy_predict.sh
 An integrated script written in bash that provides an end-to-end pipeline for the prediction of toehold efficacy for second-generation toehold switches.  The script does the following:
+ 
 (i) calls ViennaRNA RNAfold to parse the input sequence into its dot-bracket representation
+ 
  (ii) calls GrammarParser to then extract the segments of the toehold switch based on this dot-bracket representation
+ 
  (iii) calls more ViennaRNA RNAfold utilities to obtain all the feature values for the given toehold switch sequence
+ 
  (iv) passes these feature values as the input to 'predict.py` and returns the dynamic range of the toehold switch sequence. 
  
  - `Input`: Toehold switch sequence(s) in FASTA format.
@@ -30,8 +35,11 @@ An integrated script written in bash that provides an end-to-end pipeline for th
 The Input_Seq_File can contain multiple 
  
 Requirements:
+ 
 (1) `ViennaRNA` must be installed and available in the path. 
+ 
 (2) Python 
+ 
 (3) bash shell
  
 
