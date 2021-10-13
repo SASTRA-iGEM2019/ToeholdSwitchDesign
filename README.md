@@ -9,13 +9,15 @@ Used to return the domain structure of a toehold switch, i.e, parsing the sequen
  - `Output`:
 
 (2) predict.py:
+
 Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes the non-redundant engineered feature values in order as arguments, and returns the dynamic range of the construct: 
  - `Usage`: python predict.py <InputFeatures>
  - `Input Features` (in order): OverallMFE Frequency NetMFE BotRegMFE RBS-linkerMFE SpHeat
  - `Output`: 
 Please refer the manuscript for more details on the input features.
  
-(3) toehold_efficacy_predict.sh
+(3) toehold_efficacy_predict.sh:
+ 
 An integrated script written in bash that provides an end-to-end pipeline for the prediction of toehold efficacy for second-generation toehold switches.  The script does the following:
  
   > (i) calls ViennaRNA RNAfold to parse the input sequence into its dot-bracket representation
