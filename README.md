@@ -5,8 +5,8 @@ Three open-source tools were developed for machine-learning based design of RNA 
 (1) GrammarParser.py:
 
 Used to return the domain structure of a toehold switch, i.e, parsing the sequence into its structural segments based on the grammar of dot-bracket representations. The dot-bracket representation could be obtained `ViennaRNNA`'s RNAfold.
- - `Input`: Toehold sequence (toehold_seq) & its dot-bracket representation (dot-bracket_rep)
- - `Output`: Toehold switch segments
+ - `Input`: Toehold switch sequence (toehold_seq) & predicted dot-bracket representation (dot-bracket_rep)
+ - `Output`: Parsed domain sequences 
  -  Usage: `python GrammarParser toehold_seq dot-bracket_rep`
 
 (2) predict.py:
