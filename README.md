@@ -58,7 +58,7 @@ The **data** folder consists of the engineered features for the 228 toehold inst
 
 Our software is made freely available for the scientific community under GNU GPL v3. To cite:
  
-Baabu et al [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). (2021) 
+PRS Baabu, S Srinivasan, S Nagarajan, S Muthamilselvan, RR Suresh, T Selvi & A Palaniappan. [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). (2021) 
 
 ### Primary sources for building our dataset:
 1. Green AA, Silver PA, Collins JJ, Yin P. Toehold switches: De-novo-designed regulators of gene expression. Cell 2014. https://doi.org/10.1016/j.cell.2014.10.002. 
