@@ -12,7 +12,7 @@ Used to return the domain structure of a toehold switch, i.e, parsing the sequen
 (2) predict.py:
 
 Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes the non-redundant engineered feature values in order as arguments, and returns the dynamic range of the construct: 
- - `Input` (six `Features` in order): `OverallMFE`  `Frequency`  `NetMFE`  `BotRegMFE`  `RBS-linkerMFE`  `SpHeat`
+ - `Input` (six `Features` in order): `Overall Switch MFE` `Bottom Region MFE` `RBS Linker MFE` `Net MFE` `Frequency of MFE structure` `Specific Heat at 37 deg C`
  - `Output`: Dynamic range of the given toehold switch construct
  -  Usage: `python predict.py InputFeatures`
 
@@ -31,11 +31,9 @@ Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes
  
     (iv) passes these feature values as input to 'predict.py` and returns the dynamic range of the toehold switch sequence. 
  
- - `Input`: Toehold switch sequence(s) in FASTA format.
- - `Output`: Predicted dynamic range(s) of given toehold switch sequence(s)
+ - `Input`: Toehold switch sequence(s) in .fasta or .txt format.
+ - `Output`: Predicted dynamic range(s) of given toehold switch sequence(s), and engineered feature values.
  - Usage: `sh ./toehold_efficacy_predict.sh Input_Seq_File`
-
-    The script can be operated in **`batch` mode** by providing an `Input_Seq_File` with multiple toehold switch sequences. The dynamic ranges of all the toeholds are then predicted. 
  
 ### Requirements:
  

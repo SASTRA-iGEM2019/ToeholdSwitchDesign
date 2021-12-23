@@ -4,8 +4,10 @@ import re
 bs_seq = sys.argv[1]
 db_seq = sys.argv[2]
 
+#------EXAMPLE------
 # bs_seq = "GGGACTGATTAAAGATTGCTATGTGAGATTAAAGTTAACGGACTTTAGAACAGAGGAGATAAAGATGGTTAACTTTAACAACCTGGCGGCAGCGCAAAAG"
 # db_seq = "(.(.(((........((((((.((..(.(((((((((((.(.(((((............))))).).)))))))))))).)).)))))))))).)....."
+
 db_seq = db_seq.strip()
 
 dom = re.match('^([\.\(\)?]*)(\({9,})([\.\.?\(?\.?]{3})(\({5,6}\.?)(\.*)(\){5,6})([\.\.?\)?\.?]{3})(\){9,})([\.\(\)?]*)$', db_seq) #regular expression match for domains based on grammar of toehold switch
@@ -41,7 +43,7 @@ file.write(bottom_region_seq)
 file.close
 
 
-
+#-----------ADDITIONAL SEQUENCE BASED FEATURES--------------#
 
 # toehold_len = len(dom.group(1)) #toehold domain length
 # stemb_len = len(dom.group(2)) #bottom stem length
