@@ -1,31 +1,77 @@
 #!/bin/bash
 
-if [ $# -lt 2 ]; then echo "Provide the sequences of both toehold switch and trigger"; exit; fi
+while true; do
+    read -p "Enter switch sequence: " switch
+    case $switch in
+        [ATGCUatgcu]* ) touch switchSeq | echo "$switch" > switchSeq; break;; #GET SWITCH SEQUENCE AND OUTPUT TO FILE
+        * ) echo -e "\nPLEASE PROVIDE A VALID SEQUENCE";;
+    esac
+done
 
-COL='\033[0;36m'
-NC='\033[0m'
+while true; do
+    read -p "Enter trigger sequence: " trigger
+    case $trigger in
+        [ATGCUatgcu]* ) touch triggerSeq | echo "$trigger" > triggerSeq; break;; #GET TRIGGER SEQUENCE AND OUTPUT TO FILE
+        * ) echo -e "\nPLEASE PROVIDE A VALID SEQUENCE";;
+    esac
+done
 
-switch_seq=$(awk '/>/{nr[NR+1]}; NR in nr' $1)
-trig=$(awk '/>/{nr[NR+1]}; NR in nr' $2)
+switch_mfe=$(RNAfold switchSeq | grep -oE "\-?\d{1,2}\.\d{1,2}")   #SWITCH MINIMUM FREE ENERGY
+trigger_mfe=$(RNAfold triggerSeq | grep -oE "\-?\d{1,2}\.\d{1,2}") #TRIGGER MINIMUM FREE ENERGY
 
-fold=( $(RNAfold $1) )
-switch_mfe=$(RNAfold $1 | grep -oP "\-\d{1,2}\.\d{1,2}")
+echo -n "$switch&$trigger" > dimer; #OUTPUT DIMER TO USE IN RNACOFOLD
 
-echo -e "$COL Toehold switch sequence: $NC $switch_seq"
-echo -e "$COL Trigger sequence: $NC $trig" 
-echo -e "$COL Dot-bracket Notation: $NC ${fold[2]}"
+dimer_mfe=$(RNAcofold dimer | grep -oE "\-?\d{1,2}\.\d{1,2}") #SWITCH-TRIGGER COMPLEX MINIMUM FREE ENERGY
 
-trig_mfe=$(RNAfold $2| grep -oP "\-\d{1,2}\.\d{1,2}")
-dimer_mfe=$(python domain_parser.py $switch_seq ${fold[2]} $trig | RNAcofold | grep -oP "\-\d{1,2}\.\d{1,2}")
+switch_db=$(RNAfold switchSeq | grep -oE "[\.\(\)]*\s" | head -n1)  #DOT-BRACKET STRUCTURE OF SWITCH FROM RNAFOLD
+trigger_db=$(RNAfold triggerSeq | grep -oE "[\.\(\)]*\s" | head -n1) #DOT-BRACKET STRUCTURE OF TRIGGER FROM RNAFOLD
 
-net_mfe=`echo $switch_mfe + $trig_mfe - $dimer_mfe| bc`
+echo -e "Switch Sequence: $switch\n"
+echo -e "Trigger Sequence: $trigger\n"
 
-rbs_linker_mfe=$(python domain_parser.py $switch_seq ${fold[2]} 1 | RNAfold | grep -oP "\-\d{1,2}\.\d{1,2}")
-bottom_reg_mfe=$(python domain_parser.py $switch_seq ${fold[2]} 2 | RNAcofold | grep -oP "\-\d{1,2}\.\d{1,2}")
+echo -e "Switch MFE: $switch_mfe \n"
+echo -e "Switch DB: $switch_db\n"
 
-freq_in_ensembl=$(RNAfold -p --MEA $1| grep -oP "ensemble\s\K\d{1,}\.\d{1,}")
+echo -e "Trigger MFE: $trigger_mfe \n"
+echo -e "Trigger DB: $trigger_db\n"
 
-sp_heat=$(RNAheat --Tmin=37 --Tmax=37 $1| grep -oP "\s\K\d{1,}\.\d{1,}")
+echo -e "Dimer MFE: $dimer_mfe \n"
 
-effi=$(python predict.py $switch_mfe $bottom_reg_mfe $rbs_linker_mfe $net_mfe $freq_in_ensembl $sp_heat)
-echo -e "$COL Predicted ON/OFF ratio: $NC $effi"
+net_mfe=$(echo "$switch_mfe + $trigger_mfe - $dimer_mfe" | bc) #NET MINIMUM FREE ENERGY OF COMPLEX 
+echo -e "Net MFE: $net_mfe \n"
+
+sh_37=$(RNAheat --Tmin=37 --Tmax=38 switchSeq | head -n1 | grep -oE "\d\.\d{1,}")  #SPECIFIC HEAT OF SWITCH AT 37 DEG CELSIUS
+echo -e "SH 37: $sh_37 \n"
+
+freq_mfe=$(RNAfold -p --MEA switchSeq | grep -oE "0\.\d{3,}") #FREQUENCY OF MFE SWITCH STRUCTURE IN ENSEMBLE
+echo -e "Freq of MFE structure: $freq_mfe \n"
+
+# CALLING THE DOMAIN PARSER TO OBTAIN:
+
+python3 domain_parser.py $switch $switch_db 
+
+# 1. Toehold Domain
+# 2. Ascending bottom stem
+# 3. Loop region opposite to AUG
+# 4. Ascending top stem
+# 5. RBS loop
+# 6. Descending top stem
+# 7. Start codon AUG
+# 8. Descending bottom stem
+# 9. Linker 
+
+# A. Bottom Region - dimer between the 5' end toehold domain + ascending bottom stem AND the 3' descending bottom stem + linker
+# B. RBS-Linker domain - sequence from the RBS loop till the 3' end of the linker
+
+rbs_linker_mfe=$(RNAfold rbs_linker | grep -oE "\-?\d{1,2}\.\d{1,2}")
+echo -e "RBS Linker MFE: $rbs_linker_mfe \n"
+
+bottom_region_mfe=$(RNAcofold bottom_region | grep -oE "\-?\d{1,2}\.\d{1,2}")
+echo -e "Bottom Region MFE: $bottom_region_mfe \n"
+
+
+on_off=$(python predict.py $switch_mfe $bottom_region_mfe $rbs_linker_mfe $net_mfe $freq_mfe $sh_37) #COEFFICIENT VALUES FOR ON/OFF RATIO PREDICTION
+
+echo -e "--------------------------\nPREDICTED ON/OFF RATIO: $on_off\n--------------------------\n"
+
+rm switchSeq triggerSeq rbs_linker dimer bottom_region dot.ps rna.ps  # REMOVE ALL FILES
