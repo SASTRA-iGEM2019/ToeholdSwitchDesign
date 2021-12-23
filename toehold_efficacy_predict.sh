@@ -46,9 +46,9 @@ echo -e "SH 37: $sh_37 \n"
 freq_mfe=$(RNAfold -p --MEA switchSeq | grep -oE "0\.\d{3,}") #FREQUENCY OF MFE SWITCH STRUCTURE IN ENSEMBLE
 echo -e "Freq of MFE structure: $freq_mfe \n"
 
-# CALLING THE DOMAIN PARSER TO OBTAIN:
+# CALLING THE GRAMMAR PARSER TO OBTAIN:
 
-python3 domain_parser.py $switch $switch_db 
+python3 GrammarParser.py $switch $switch_db 
 
 # 1. Toehold Domain
 # 2. Ascending bottom stem
