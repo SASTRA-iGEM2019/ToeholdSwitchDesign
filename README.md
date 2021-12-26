@@ -58,8 +58,13 @@ Our software is made freely available for the scientific community under GNU GPL
  
 PRS Baabu, S Srinivasan, S Nagarajan, S Muthamilselvan, RR Suresh, T Selvi & A Palaniappan. [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). (2021) 
 
+Please find a short video tutorial [here](https://drive.google.com/file/d/174FScxyP-JJ2PIRSd5YYkDX9PxY_G5kG/view) explaining how to use our scripts, validated using Takahashi et al [^Takahashi Data].
+
+
 ### Primary sources for building our dataset:
 1. Green AA, Silver PA, Collins JJ, Yin P. Toehold switches: De-novo-designed regulators of gene expression. Cell 2014. https://doi.org/10.1016/j.cell.2014.10.002. 
 2.  Pardee K, Green AA, Takahashi MK, Braff D, Lambert G, Lee JW, et al. Rapid, LowCost Detection of Zika Virus Using Programmable Biomolecular Components. Cell
 2016;165:1255–66. https://doi.org/10.1016/j.cell.2016.04.059.
 3. Green AA, Kim J, Ma D, Silver PA, Collins JJ, Yin P. Complex cellular logic computation using ribocomputing devices. Nature 2017. https://doi.org/10.1038/nature23271.
+
+[:^Takahashi Data]: Takahashi, M.K., Tan, X., Dy, A.J. et al. A low-cost paper-based synthetic biology platform for analyzing gut microbiota and host biomarkers. Nat Commun 9, 3347 (2018). https://doi.org/10.1038/s41467-018-05864-4
