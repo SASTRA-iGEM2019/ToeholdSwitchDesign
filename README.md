@@ -52,14 +52,17 @@ The **data** folder consists of the engineered features for the 228 toehold inst
 
 (2) *selected_features.csv* : consisting features with the best predictive capabilities, post feature-selection (see our manuscript for details).
 
-## Citation 
-
-Our software is made freely available for the scientific community under GNU GPL v3. To cite:
- 
-PRS Baabu, S Srinivasan, S Nagarajan, S Muthamilselvan, RR Suresh, T Selvi & A Palaniappan. [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). (2021) 
+## Video demo
 
 Please find a short video tutorial [here](https://drive.google.com/file/d/174FScxyP-JJ2PIRSd5YYkDX9PxY_G5kG/view) explaining how to use our scripts, validated using Takahashi et al [^takahashi].
 
+[![Toehold switch software](http://img.youtube.com/vi/_HCex0ePSHI/0.jpg)](http://www.youtube.com/watch?v=_HCex0ePSHI "Software Demo")
+
+## Citation 
+
+Our software is made freely available for the scientific community under GNU GPLv3. To cite:
+ 
+PRS Baabu, S Srinivasan, S Nagarajan, S Muthamilselvan, RR Suresh, T Selvi & A Palaniappan. [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). (2021) 
 
 ### Primary sources for building our dataset:
 1. Green AA, Silver PA, Collins JJ, Yin P. Toehold switches: De-novo-designed regulators of gene expression. Cell 2014. https://doi.org/10.1016/j.cell.2014.10.002. 
