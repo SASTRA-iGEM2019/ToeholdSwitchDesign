@@ -70,7 +70,7 @@ bottom_region_mfe=$(RNAcofold bottom_region | grep -oE "\-?\d{1,2}\.\d{1,2}")
 echo -e "Bottom Region MFE: $bottom_region_mfe \n"
 
 
-on_off=$(python predict.py $switch_mfe $bottom_region_mfe $rbs_linker_mfe $net_mfe $freq_mfe $sh_37) #COEFFICIENT VALUES FOR ON/OFF RATIO PREDICTION
+on_off=$(python predict_linear.py $switch_mfe $bottom_region_mfe $rbs_linker_mfe $net_mfe $freq_mfe $sh_37) #COEFFICIENT VALUES FOR ON/OFF RATIO PREDICTION
 
 echo -e "--------------------------\nPREDICTED ON/OFF RATIO: $on_off\n--------------------------\n"
 
