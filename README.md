@@ -93,7 +93,7 @@ PRS Baabu, S Srinivasan, S Nagarajan, S Muthamilselvan, RR Suresh, T Selvi & A P
 
 ## Contact
 
-For comments, queries and more information, please contact [`Ashok Palaniappan`](mailto:apalania@scbt.sastra.ac.in) 
+For comments, queries and more information, please contact [`Ashok Palaniappan`](mailto:apalaniaATscbtDOTsastraDOTacDOTin) 
 
 ### Primary sources for building our dataset:
 1. Green AA, Silver PA, Collins JJ, Yin P. Toehold switches: De-novo-designed regulators of gene expression. Cell 2014. https://doi.org/10.1016/j.cell.2014.10.002. 
