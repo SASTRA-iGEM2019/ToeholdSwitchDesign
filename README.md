@@ -18,8 +18,15 @@ Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes
 
 (3) NN_model.ipynb:
 
-This Jupyter notebook contains the code to validate our neural network model. To use it for predicting efficacies of new toehold switches, the path to a csv file with the instances/features may be specified in the final code block in the indicated place; the header line and first two fields are ignored. See here for an [`example`] (https://raw.githubusercontent.com/SASTRA-iGEM2019/ToeholdSwitchDesign/master/data/miR_toeholds.csv). 
+This Jupyter notebook contains the code to validate our neural network model. To use it for predicting efficacies of new toehold switches, the path to a csv file with the instances/features may be specified in the final code block in the indicated place; the header line and first two fields are ignored. See here for an [`example`](https://raw.githubusercontent.com/SASTRA-iGEM2019/ToeholdSwitchDesign/master/data/miR_toeholds.csv). Then use the following code:
 
+```
+import pandas as pd 
+new_feats= pd.read_csv('/path/to/csv_file')
+new_feats = new_feats.iloc[:,2:]
+model = load_model('/path/to/saved_model/',custom_objects={'r_square':r_square})
+print(float(model.predict(new_feats)[0]))
+```
   
 (4) toehold_efficacy_predict.sh:
  
@@ -58,6 +65,18 @@ The **data** folder consists of the engineered features for the 228 toehold inst
 
 (3) *miR_toeholds.csv*: consisting features of the toehold switches designed for the two miRNA biomarkers of cervical cancer identified in our study, viz. mir-21-5p and miR-20a-5p. 
 
+## NN_Models 
+
+This folder contains the *saved_models* of the best-performing neural network models (adj. R2 > 0.5) for making batch-predictions on new toehold switches. The models are suffixed with a number, indicating their rank. To find the ON/OFF ratio of designed toehold switches using any of these models, load the model and predict. 
+
+```
+import pandas as pd 
+new_feats= pd.read_csv('/path/to/csv_file')
+new_feats = new_feats.iloc[:,2:]
+model = load_model('/path/to/saved_model/',custom_objects={'r_square':r_square})
+print(float(model.predict(new_feats)[0]))
+```
+
 ## Video demo
 
 Please find a short video tutorial [here](https://drive.google.com/file/d/174FScxyP-JJ2PIRSd5YYkDX9PxY_G5kG/view) explaining how to use our scripts, validated using Takahashi et al [^takahashi].
@@ -69,6 +88,10 @@ Please find a short video tutorial [here](https://drive.google.com/file/d/174FSc
 Our software is made freely available for the scientific community under GNU GPLv3. To cite:
  
 PRS Baabu, S Srinivasan, S Nagarajan, S Muthamilselvan, RR Suresh, T Selvi & A Palaniappan. [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). (2021) 
+
+## Contact
+
+For comments, queries and more information, please contact [`Ashok Palaniappan`](mailto:apalania@scbt.sastra.ac.in) 
 
 ### Primary sources for building our dataset:
 1. Green AA, Silver PA, Collins JJ, Yin P. Toehold switches: De-novo-designed regulators of gene expression. Cell 2014. https://doi.org/10.1016/j.cell.2014.10.002. 
