@@ -51,7 +51,7 @@ print(float(model.predict(new_feats)[0]))
  
 (1) [`ViennaRNA`](https://www.tbi.univie.ac.at/RNA/) must be installed and available in the path. 
  
-(2) Python 3.0 or above
+(2) Python 3.x with pandas, numpy,  matplotlib, sklearn, tensorflow and keras libraries installed. 
  
 (3) bash shell
  
