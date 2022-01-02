@@ -16,7 +16,7 @@ Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes
  - `Output`: Dynamic range of the given toehold switch construct
  -  Usage: `python predict.py InputFeatures`
 
-(3) NN_model.ipynb:
+(3) nn_model.ipynb:
 
 This Jupyter notebook contains the code to validate our neural network model. To use it for predicting efficacies of new toehold switches, the path to a csv file with the instances/features may be specified in the final code block in the indicated place; the header line and first two fields are ignored. See here for an [`example`](https://raw.githubusercontent.com/SASTRA-iGEM2019/ToeholdSwitchDesign/master/data/miR_toeholds.csv). Then use the following code:
 
@@ -40,7 +40,7 @@ print(float(model.predict(new_feats)[0]))
  
     (iii) calls more ViennaRNA RNAfold utilities to obtain engineered feature values for the given toehold switch sequence
  
-    (iv) passes these feature values as input to 'predict_linear.py` and returns the dynamic range of the toehold switch sequence. Alternatively the user may use NN_model.py described above for making the predictions. 
+    (iv) passes these feature values as input to 'predict_linear.py` and returns the dynamic range of the toehold switch sequence. Alternatively the user may use nn_model.py described above for making the predictions. 
  
  - `Input`: Toehold switch sequence(s) in .fasta or .txt format.
  - `Output`: Predicted dynamic range(s) of given toehold switch sequence(s), and engineered feature values.
