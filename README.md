@@ -18,10 +18,11 @@ Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes
 
 (3) nn_model.ipynb:
 
-This Jupyter notebook contains the code to validate our neural network model. To use it for predicting efficacies of new toehold switches, the path to a csv file with the instances/features may be specified in the final code block in the indicated place; the header line and first two fields are ignored. See here for an [`example`](https://raw.githubusercontent.com/SASTRA-iGEM2019/ToeholdSwitchDesign/master/data/miR_toeholds.csv). Then use the following code:
+This Jupyter notebook contains the code to validate our neural network model. To use it for predicting efficacies of new toehold switches, the path to a csv file with the instances/features may be specified in the final code block in the indicated place; the header line and first two fields are ignored. See here for an [`example`](https://raw.githubusercontent.com/SASTRA-iGEM2019/ToeholdSwitchDesign/master/data/miR_toeholds.csv). Then use the following code, where the path to the saved model (see section on **NN models**) may also be provided:
 
 ```
 import pandas as pd 
+from keras.models import load_model
 new_feats= pd.read_csv('/path/to/csv_file')
 new_feats = new_feats.iloc[:,2:]
 model = load_model('/path/to/saved_model/',custom_objects={'r_square':r_square})
@@ -71,6 +72,7 @@ This folder contains the *saved_models* of the best-performing neural network mo
 
 ```
 import pandas as pd 
+from keras.models import load_model
 new_feats= pd.read_csv('/path/to/csv_file')
 new_feats = new_feats.iloc[:,2:]
 model = load_model('/path/to/saved_model/',custom_objects={'r_square':r_square})
