@@ -18,7 +18,7 @@ Used to predict the efficacy (i.e, dynamic range) of a new toehold switch. Takes
 
 (3) NN_model.ipynb:
 
-This Jupyter notebook contains the code to validate our neural network model. To use it for predicting efficacies of new toehold switches, the path to a csv file with the instances/features may be specified in the final code block in the indicated place; the header line and first two fields are ignored. See here for an [`example'] (https://raw.githubusercontent.com/SASTRA-iGEM2019/ToeholdSwitchDesign/master/data/miR_toeholds.csv). 
+This Jupyter notebook contains the code to validate our neural network model. To use it for predicting efficacies of new toehold switches, the path to a csv file with the instances/features may be specified in the final code block in the indicated place; the header line and first two fields are ignored. See here for an [`example`] (https://raw.githubusercontent.com/SASTRA-iGEM2019/ToeholdSwitchDesign/master/data/miR_toeholds.csv). 
 
   
 (4) toehold_efficacy_predict.sh:
