@@ -26,7 +26,7 @@ from keras.models import load_model
 new_feats= pd.read_csv('/path/to/csv_file')
 new_feats = new_feats.iloc[:,2:]
 model = load_model('/path/to/saved_model/',custom_objects={'r_square':r_square})
-print(float(model.predict(new_feats)[0]))
+print(float(model.predict(new_feats)))
 ```
   
 (4) toehold_efficacy_predict.sh:
@@ -76,7 +76,7 @@ from keras.models import load_model
 new_feats= pd.read_csv('/path/to/csv_file')
 new_feats = new_feats.iloc[:,2:]
 model = load_model('/path/to/saved_model/',custom_objects={'r_square':r_square})
-print(float(model.predict(new_feats)[0]))
+print(float(model.predict(new_feats)))
 ```
 
 ## Video demo
