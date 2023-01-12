@@ -93,7 +93,7 @@ Please cite our work:
 
 Baabu PRS, Srinivasan S, Nagarajan S, Muthamilselvan S, Selvi T, Suresh RR, Palaniappan A. [End-to-end computational approach to the design of RNA biosensors for detecting miRNA biomarkers of cervical cancer](https://www.sciencedirect.com/science/article/pii/S2405805X22000321). Synth Syst Biotechnol. 2022 Apr 4;7(2):802-814. doi: 10.1016/j.synbio.2022.03.008. PMI D: 35475253; PMCID: PMC9014444.
 
-biorxiv preprint (2021). [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). 
+[biorxiv preprint](https://doi.org/10.1101/2021.07.09.451282) (2021). 
 
 ## Contact
 
