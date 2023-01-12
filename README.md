@@ -83,7 +83,7 @@ print(float(model.predict(new_feats)))
 
 ## Video demo
 
-Please find a short video tutorial [here](https://www.youtube.com/watch?v=_HCex0ePSHI) explaining how to use our scripts, validated using Takahashi et al [^takahashi].
+Please find a short video tutorial [here](https://youtu.be/_HCex0ePSHI) explaining how to use our scripts, validated using Takahashi et al [^takahashi].
 
 [![Toehold switch software](http://img.youtube.com/vi/_HCex0ePSHI/0.jpg)](http://www.youtube.com/watch?v=_HCex0ePSHI "Software Demo")
 
