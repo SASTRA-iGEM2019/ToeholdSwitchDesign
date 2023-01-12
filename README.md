@@ -1,6 +1,6 @@
 # Modelling the dynamic range of second-generation toehold switches
 
-Three open-source tools were developed for machine-learning based design of RNA devices, namely toehold switches. They have been developed for second-generation toehold switch designs, but could be adapted for first-generation toehold switches. 
+Three open-source tools were developed for machine-learning based design of RNA devices, namely toehold switches. They have been developed for second-generation toehold switch designs, but could be adapted for first-generation toehold switches. Our software is made freely available for the scientific community under GNU GPLv3. 
 
 (1) GrammarParser.py:
 
@@ -89,11 +89,11 @@ Please find a short video tutorial [here](https://youtu.be/_HCex0ePSHI) explaini
 
 ## Citation 
 
-Our software is made freely available for the scientific community under GNU GPLv3. To cite:
- 
+Please cite our work: 
+
 Baabu PRS, Srinivasan S, Nagarajan S, Muthamilselvan S, Selvi T, Suresh RR, Palaniappan A. [End-to-end computational approach to the design of RNA biosensors for detecting miRNA biomarkers of cervical cancer](https://www.sciencedirect.com/science/article/pii/S2405805X22000321). Synth Syst Biotechnol. 2022 Apr 4;7(2):802-814. doi: 10.1016/j.synbio.2022.03.008. PMI D: 35475253; PMCID: PMC9014444.
 
-PRS Baabu, S Srinivasan, S Nagarajan, S Muthamilselvan, RR Suresh, T Selvi & A Palaniappan. [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). (2021) 
+biorxiv preprint (2021). [End-to-end computational approach to the design of RNA biosensors for miRNA biomarkers of cervical cancer](https://doi.org/10.1101/2021.07.09.451282). 
 
 ## Contact
 
